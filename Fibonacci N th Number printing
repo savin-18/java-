@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class Helloworld {
+    public static void main(String args[]){
+    Scanner scan = new Scanner (System.in);
+    Integer num = scan.nextInt();
+    Integer first = 0;
+    Integer second = 1;
+    Integer fibo = 0;
+    if(num <= 0)   
+    {  
+        System.out.println("N can never be zero or negative");  
+    return;  
+    }
+    else if(num<3){
+        System.out.println("Please enter the number greater than 2");
+    }
+    for(int i=3;i<=num;i++){
+        fibo = first+second;
+        first = second ;
+        second = fibo;
+    }
+    System.out.println("The"+num+"th Number of Fibonacci Series is:"+fibo);
+    }
+}
+
+// this is used to print the n th number of fibonacci series 
