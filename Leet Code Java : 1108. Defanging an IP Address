@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class DefangingIPAddressLCPBNO1108 {
+    public static String defang(String ss){
+      //  String ss = "1.1.1.1";
+       // char s[] = ss.toCharArray();
+        String defIp =ss.replace(".","[.]");
+        return defIp;
+    }
+    public static void main (String args[]){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Please enter the IP Address to Defang:");
+        String ss = sc.next();
+        System.out.println(defang(ss));
+    }
+}
