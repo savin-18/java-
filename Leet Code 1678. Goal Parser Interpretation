@@ -1,0 +1,26 @@
+import java.util.Scanner;
+// local run code 
+public class InterpretationParser {
+    public static String Parama(String command){
+
+        String replace= command.replace("()","o");
+        replace = replace.replace("(al)" , "al");
+        return replace;
+    }
+
+    public static void main (String args[]){
+        Scanner scan = new Scanner(System.in);
+        String command = scan.next();
+        System.out.println(Parama(command));
+    }
+}
+
+//Leet code solved solution
+
+class Solution {
+    public String interpret(String command) {
+       String replace= command.replace("()","o");
+        replace = replace.replace("(al)" , "al");
+        return replace;
+    }
+}
