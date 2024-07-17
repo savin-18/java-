@@ -1,0 +1,25 @@
+//leet code solution
+
+class Solution {
+    public String toLowerCase(String s) {
+        return (s.toLowerCase());
+       }
+}  
+
+//Intellij
+
+
+import java.util.Scanner;
+
+public class TolowerCase {
+    public static String LowerCase(String lo){
+        System.out.println(lo);
+        return(lo.toLowerCase());
+    }
+    public static void main (String args[]){
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Please Enter the Text to convert to lower Case:");
+        String lowerString = scan.next();
+        System.out.println(LowerCase(lowerString));
+    }
+}
