@@ -1,0 +1,28 @@
+class Solution {
+    public int numOfStrings(String[] patterns, String word) {
+        
+        int count =0;
+        for (String val : patterns){
+            if(word.contains(val)){
+                count++;
+            }
+        }
+        return count;
+    }
+}
+
+//local
+
+public class WordContains {
+    public static void main (String args[]){
+        String pat[] = {"a","abc"};
+        String ss = "abc";
+        int count = 0;
+        for (String num  : pat){
+            if(ss.contains(num)){
+                count++;
+            }
+        }
+        System.out.println(count);
+    }
+}
