@@ -1,0 +1,15 @@
+class Solution {
+    public String replaceDigits(String s) {
+        char[] let = s.toCharArray(); // Convert the string to a char array
+        String replace = ""; // Initialize the replace string
+        for (int i = 0; i < let.length; i++) { // Use .length instead of .length()
+            if (i % 2 == 1) { // Check if the index is odd
+                int c = let[i] - '0'; // Convert the character to its integer value
+                replace += (char) (let[i - 1] + c); // Replace the digit
+            } else {
+                replace += let[i]; // Appending the letter as it is
+            }
+        }
+        return replace; // Return string
+    }
+}
