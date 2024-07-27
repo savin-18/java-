@@ -1,0 +1,20 @@
+class Solution {
+    public boolean checkString(String s) {
+        char [] arr = s.toCharArray();
+        boolean bo = false;
+        if(arr.length>1){
+        for(int i=1;i< arr.length;i++){
+            if (arr[i]>=arr[i-1]){
+                bo = true;
+            }else{
+                bo=false;
+                break;
+            }
+        }
+        }
+        else {
+            bo=true;
+        }
+        return bo;
+    }
+}
