@@ -1,0 +1,17 @@
+class Solution {
+    public boolean areNumbersAscending(String s) {
+        String num = s.replaceAll("([a-z])"," ").replaceAll("( )+"," ").trim();
+        String[]parts = num.split(" ");
+        boolean result =false;
+      
+        for (int i=1;i<parts.length;i++) {
+            if(Integer.valueOf(parts[i])>Integer.valueOf(parts[i-1])){
+                result = true;
+            }else{
+                result = false;
+                break;
+            }
+        }
+        return result;
+    }
+}
