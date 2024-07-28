@@ -5,7 +5,7 @@ class Solution {
             if(words[i].contains(String.valueOf(x))){
                 ls.add(i);
             }
-        }
+        } 
         return ls;
     }
 }
