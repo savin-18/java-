@@ -1,0 +1,12 @@
+class Solution {
+    public int countKeyChanges(String s) {
+        String ss [] = s.split("");
+        int count = 0;
+        for (int i=1;i<ss.length;i++){
+            if(!ss[i-1].equalsIgnoreCase(ss[i])){
+                count++;
+            }
+        }
+        return count;
+    }
+}
