@@ -1,0 +1,16 @@
+class Solution {
+    public boolean isAcronym(List<String> words, String s) {
+        String word[] = words.toArray(new String[0]);
+        boolean val = false;
+        String acr = "";
+        for (int i=0;i<word.length;i++){
+            char newWord[] = word[i].toCharArray();
+            for(int j=0;j<newWord.length;j++){
+                if(j==0){
+                acr+=newWord[j];
+                }
+            }
+        }
+        return acr.equals(s);
+    }
+}
