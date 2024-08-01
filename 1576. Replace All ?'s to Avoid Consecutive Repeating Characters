@@ -1,0 +1,32 @@
+class Solution {
+    public String modifyString(String s) {
+        boolean usedChar[] = new boolean [128];
+       
+        for (char c : s.toCharArray()){
+            if(c != '?'){
+                usedChar[c-'a'] = true;
+            }
+        }
+        
+        List<Character> unusedChar = new ArrayList<Character>();
+        for(char c = 'a'; c<='z';c++){
+            if(usedChar[c-'a'] == false)
+            unusedChar.add(c);
+        }
+
+        int id =0;
+        StringBuffer sb = new StringBuffer();
+        for (char c : s.toCharArray()){
+            if(c == '?'){
+                sb.append(unusedChar.get(id));
+                id++;
+                if(id == unusedChar.size()){
+                    id = 0;
+                }
+            }else{
+                sb.append(c);
+            }
+        }
+        return sb.toString();
+    }
+}
