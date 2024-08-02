@@ -1,0 +1,22 @@
+class Solution {
+    public int maximumValue(String[] strs) {
+         int count = 0;
+        int numVal[] = new int[strs.length];
+        for (int i=0; i<strs.length;i++){
+            int count1 =0;
+            if(strs[i].matches(".*[a-zA-Z].*")){
+                count = strs[i].length();
+                numVal[i] = count;
+            }else if (strs[i].matches(".*\\d.*")) {
+                numVal[i] =(Integer.parseInt(strs[i]));
+            }
+        }
+        int largest = numVal[0];
+        for (int i = 1; i < numVal.length; i++) {
+            if (numVal[i] > largest) {
+                largest = numVal[i];
+            }
+        }
+        return largest;
+    }
+}
