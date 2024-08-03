@@ -1,0 +1,34 @@
+class Solution {
+    public String mergeAlternately(String word1, String word2) {
+        String finalWord = new String ();
+        int i = 0;
+        for (char c : word1.toCharArray()){
+            finalWord+=c;
+            if(word2.length()>i){
+                finalWord += word2.charAt(i);
+                i++;
+            }
+        }
+        return (finalWord+word2.substring(i));
+    }
+}
+
+
+
+/*public class MergeStringsAlternatelyLCPBNO1768 {
+    public static void main(String[] args) {
+        String ss = "abcd";
+        String sa = "pq";
+        String a = "";
+        int i=0;
+        for (char c : ss.toCharArray()){
+            a+=c;
+           if(sa.length()>i) {
+                a += sa.charAt(i);
+                i++;
+            }
+        }
+        System.out.println(a+sa.substring(i));
+    }
+}*/
+
