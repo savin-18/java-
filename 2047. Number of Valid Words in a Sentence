@@ -1,0 +1,28 @@
+class Solution {
+    public int countValidWords(String sentence) {
+        String ss[] = sentence.split("\\s+");
+        int count = 0;
+        for (String word : ss){
+            if(word.matches("^[a-zA-Z]+(-[a-zA-Z]+)*[,]?[.]?$")){
+                count++;
+            }
+        }
+        return count;
+    }
+}
+
+/*public class NumberOfValidWordsLCPBNO2047 {
+    public static void main(String[] args) {
+        String s ="-";
+        String[] ss = s.trim().split("\\s+");
+        int count = 0;
+        String regex = "^[a-zA-Z]+(-[a-zA-Z]+)*[,]?[.]?$";
+        for (String word : ss) {
+            if (word.matches(regex)) {
+                count++;
+            }
+        }
+        System.out.println("Valid words count: " + count);
+    }
+}
+*/
