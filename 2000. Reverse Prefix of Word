@@ -15,3 +15,10 @@ class Solution {
         //return sb.toString();
     }
 }
+
+/** simple format
+    int number = word.indexOf(ch);
+       StringBuffer ns = new StringBuffer();
+       ns.append(word.substring(0,number+1));
+        System.out.println(ns.reverse().append(word.substring(number+1,word.length())));
+    */
